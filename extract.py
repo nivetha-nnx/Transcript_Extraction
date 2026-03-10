@@ -1,69 +1,54 @@
 import json
+import re
 
-def load_transcript(file_path):
-    """Load JSON lines from file"""
-    data = []
+input_file = "output.txt"
+output_file = "combined_transcript.txt"
 
-    with open(file_path, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                data.append(json.loads(line))
+current_sentence = ""
+current_start_time = None
+sentences = []
 
-    return data
+sentence_end = {".", "?"}
 
-def format_transcript(data):
-    formatted = ""
-    sentence_start = True
+with open(input_file, "r", encoding="utf-8") as f:
+    for line in f:
+        data = json.loads(line)
 
-    for item in data:
-
-        if item.get("message") != "AddTranscript":
+        if data.get("message") != "AddTranscript":
             continue
 
-        metadata = item.get("metadata", {})
-        transcript = metadata.get("transcript", "")
-        start_time = metadata.get("start_time", "")
+        metadata = data.get("metadata", {})
+        text = metadata.get("transcript", "").strip()
+        start_time = metadata.get("start_time", 0)
+        attaches_to = metadata.get("attaches_to")
 
-        results = item.get("results", [])
-        attaches_to = ""
+        if not text:
+            continue
 
-        if results and "attaches_to" in results[0]:
-            attaches_to = results[0]["attaches_to"]
+        # start new sentence timing
+        if current_start_time is None:
+            current_start_time = start_time
 
-        # Add start time at beginning of sentence
-        if sentence_start:
-            formatted += f"{start_time:.2f} "
-            sentence_start = False
-
-        # punctuation attachment
+        # apply attaches_to rule
         if attaches_to == "previous":
-            formatted += transcript
+            current_sentence += text
         else:
-            if formatted and not formatted.endswith("\n"):
-                formatted += " "
-            formatted += transcript
+            if current_sentence:
+                current_sentence += " " + text
+            else:
+                current_sentence = text
 
-        # sentence break
-        if transcript in [".", "?"]:
-            formatted += "\n"
-            sentence_start = True
+        # remove accidental spaces before punctuation
+        current_sentence = re.sub(r"\s+([.,?])", r"\1", current_sentence)
 
-    return formatted.strip()
+        # break sentence
+        if text in sentence_end:
+            sentences.append(f"{current_start_time:.2f}  {current_sentence.strip()}")
+            current_sentence = ""
+            current_start_time = None
 
-def save_output(text, file):
-    with open(file, "w", encoding="utf-8") as f:
-        f.write(text)
+with open(output_file, "w", encoding="utf-8") as f:
+    for s in sentences:
+        f.write(s + "\n")
 
-def main():
-    input_file = "output.txt"
-    output_file = "updated_combined_transcript.txt"
-
-    data = load_transcript(input_file)
-
-    formatted_text = format_transcript(data)
-
-    save_output(formatted_text, output_file)
-
-if __name__ == "__main__":
-    main()
+print("Transcript formatted successfully")
