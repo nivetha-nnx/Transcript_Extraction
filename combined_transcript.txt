@@ -1,149 +1,171 @@
-0.00  Please state your name for the record and spell it.
-4.32  is John Dooley.
-6.16  D.O.O.
-7.40  Rewi.
-9.88  Please state your address, including your zipcode.
-14.52  You mean where I live now?
-14.52  Yes .
-17.36  Your current location.5143 .
-22.16  White PineStreet.
-23.64  Only.603347278 .
-29.80  Please state your Social Security number.803304772 .
-38.16  Are you employed?
-40.28  Yes.
-41.39  Self-employed.
-42.36  What is the name of your company?
-44.48  The name is HangTime, Inc.. Where is that business located?
-51.96  My for three.
-51.96  Five.
-53.72  Red apple lanes .
-55.84  Came tokey, Illinois .
-57.36  And could you state your federal tax IDnumber?
-61.32  Oh, I have to look that up.478031400 .
-98.80  Please make this as exhibitone.
-104.20  How long have you beenself-employed?
-108.32  Since January 1st.
-108.32  January 1st.
-110.84  What year? January 2002. No ,wait .
-116.84  Januaryoh three .
-119.08  I'm sure it wasJanuary 1st, 2003 .
-122.52  Are youmarried? Yes .
-124.84  What is your wife's name?
-126.36  Mary Jane Wilson.
-128.60  W I r l s t o n. And how long have you beenmarried?
-135.52  About five years sinceMay 98th .
-138.96  Have you seen anything in the local paper about this incident?
-142.76  No, I don't read the papers.
-145.00  I'msorry .
-147.12  My colleague just walkedin.
-148.69  Could I have a couple of minutes?
-150.44  Sure.
-151.20  Let's go .
-153.04  Off the record.
-204.24  This is Miss Redman.
-207.12  She'll be joining us for the rest of the deposition .
-209.96  Anyobjections?
-211.40  Noobjections.
-212.56  Thank you.
-213.44  Is it true that on the night of July 4th of thisyear , you and some friends were in a bar called the Sippin?
-224.04  Yes.
-225.44  Was your wife at the.
-225.44  No .
-226.96  Or any of your friends wives at the sip?
-231.07  Objection .Relevance .
-233.12  No .
-233.76  Forget that .
-234.71  He is already answered it.Well , that .
-238.60  Where is the sip and located ?
-241.28  You want theaddress ?
-243.28  If youknow it .Yes .
-244.80  Well , it's close to myshop .
-248.04  Whether cross from the sound studio .
-249.28  But on the crossstreet .
-251.48  It is 302 South land .
-256.16  Did you drive to the bar thatnight ?No , I did not.
-260.96  John drove that night.
-263.04  Who's John and what is his fullname ?Oh , that was my brother inlaw , John Wilson .
-270.00  Where does he live?
-271.68  Lives inToronto .
-273.56  Where did JohnPark ?
-276.12  The car that night ?
-277.36  He parked in front of the sip and did with her other cars parked on the street by where John parked?
-283.40  Yes.
-284.68  There was another car and a tractor .
-287.64  A tractor?Yes .
-290.39  John Park right behind it.
-291.96  What time did you get to the sip and dip?
-294.84  It wasabout 9:30 p.m. .
-297.60  What are you drinking at the CIP?
-299.08  Anddip ?
-299.88  Ayou .
-300.96  What do you call afew ?It's three .Four .Nothing .
-306.56  I'm sure itwas three .
-308.40  And what were you drinking?
-310.28  Tap beer pitchers.I mean , glasses of beer.
-315.36  What time did you leave this at the dip?
-317.96  It was close time .
-319.16  It was once 30 a m. Did you immediately drive away when you left the bar?
-325.60  Well , wetried .
-326.64  Well , why couldn't you leave?
-326.64  Well , what ?
-328.68  To get in the car .
-331.52  We noticed the liquid on theground .
-333.92  It turns out that John's cars front end wassmashed.
-337.64  What happened next ?
-339.44  This guy comes towards us with a gun in hishand .
-342.56  Do you know what kind of gun itwas?
-344.80  It was a 45 calibergun .
-346.56  No doubt aboutit .
-347.84  Do you know the mate of thegun ?
-350.12  No.
-350.88  Well, what did you do?
-353.56  You just asked him to put the gun away .
-355.24  And he did .
-356.44  It appears that he wasn't sure where he was to get back to thecar .
-361.68  What do you mean when you say the car was smashed?
-364.52  Well , smashed almost to the windshield and begun to smoke and leak.
-369.84  Could youexplain ?
-371.52  Smashed?Objection .
-373.39  Asked andanswered .
-374.64  I think he just wants him to describe what hemeans .
-377.94  Perhaps he can rephrase it .
-377.94  Ever mind ?
-380.00  You can answer.
-381.76  I don't remember the question.
-381.76  Reporter .
-384.31  Could you read back the last question?
-391.44  Could you explain smashed.
-394.79  It was a three foot dent in the front of the car.
-399.24  Please mark this as exhibit numberfive .
-403.68  That's exhibitfive .Oh , yeah.
-408.72  What did you do when you noticed John's car wasdamaged ?
-414.28  We called the police.
-415.68  What happened while you were waiting for the police toarrive ?
-419.20  At that came speeding past our car .
-422.36  It must have been going50mph .
-425.88  I think it was only a25 mile per hour zone .
-429.68  And did the guystop ?
-432.24  No.
-433.36  It came around theblock .
-434.89  Couple oftimes .
-435.96  We never saw himagain .
-437.52  Was there any witness that came forward about the damage to John'scar ?
-441.64  Not that wefound .
-443.16  Did you get an estimate on John'scar ?
-445.72  Yes.
-446.48  And how much was theestimate ?
-449.44  It was about$7,500 .
-452.56  Is that the exact price of theestimate ?
-455.52  No.
-456.44  It was about$7,530 .
-460.92  So the exact price of the estimate was$7,530 .No , let me look.
-468.92  The exact price of the estimate was$7,529 .
-476.92  And$0.21 .
-478.72  Please mark this as exhibitthree .
-484.36  I have no more questions .
-485.72  Do you ?
-486.88  I havenone .
-488.96  I have nothing.
-490.32  Thank you for your time.
+1.92 Please state your name for the record and spell it.
+5.12 is John Dooley.
+6.33 D.O.O. Rewi.
+11.72 Please state your address, including your zip code.
+15.00 You mean where I live now?
+17.76 Yes.
+18.12 Your current location.
+20.56 5143.
+22.20 White Pine Street.
+24.24 Only.
+25.32 603347278.
+30.56 Please state your Social Security number.
+33.44 803304772.
+39.28 Are you employed?
+40.84 Yes.
+41.40 Self-employed.
+42.76 What is the name of your company?
+45.28 The name is Hang Time, Inc..
+50.04 Where is that business located?
+52.90 My for three.
+53.76 Five.
+54.60 Red apple lanes.
+56.16 Came to key, Illinois.
+58.36 And could you state your federal tax ID number?
+61.57 Oh, I have to look that up.
+94.24 478031400.
+100.44 Please make this as exhibit one.
+106.36 How long have you been self-employed?
+109.16 Since January 1st.
+111.28 January 1st.
+112.12 What year?
+113.96 January 2002.
+115.88 No, wait.
+117.52 January oh three.
+119.84 I'm sure it was January 1st, 2003.
+122.96 Are you married?
+124.12 Yes.
+125.04 What is your wife's name?
+127.16 Mary Jane Wilson.
+129.32 W I r l s t o n.
+133.16 And how long have you been married?
+135.80 About five years since May 98th.
+139.80 Have you seen anything in the local paper about this incident?
+143.00 No, I don't read the papers.
+146.12 I'm sorry.
+147.16 My colleague just walked in.
+148.72 Could I have a couple of minutes?
+150.52 Sure.
+152.32 Let's go.
+153.04 Off the record.
+205.72 This is Miss Redman.
+207.72 She'll be joining us for the rest of the deposition.
+209.96 Any objections?
+211.56 No objections.
+212.60 Thank you.
+214.84 Is it true that on the night of July 4th of this year, you and some friends were in a bar called the Sippin?
+224.72 Yes.
+226.08 Was your wife at the.
+228.20 No.
+228.80 Or any of your friends wives at the sip?
+231.96 Objection.
+232.56 Relevance.
+233.16 No.
+234.30 Forget that.
+234.76 He is already answered it.
+237.20 Well, that.
+238.96 Where is the sip and located?
+242.20 You want the address?
+243.40 If you know it.
+244.12 Yes.
+245.20 Well, it's close to my shop.
+248.08 Whether cross from the sound studio.
+250.04 But on the cross street.
+251.60 It is 302 South land.
+257.20 Did you drive to the bar that night?
+259.24 No, I did not.
+261.72 John drove that night.
+263.80 Who's John and what is his full name?
+266.52 Oh, that was my brother in law, John Wilson.
+270.52 Where does he live?
+272.52 Lives in Toronto.
+275.08 Where did John Park?
+276.12 The car that night?
+278.16 He parked in front of the sip and did with her other cars parked on the street by where John parked?
+283.96 Yes.
+285.24 There was another car and a tractor.
+287.68 A tractor?
+289.84 Yes.
+290.40 John Park right behind it.
+292.92 What time did you get to the sip and dip?
+295.40 It was about 9:30 p.m..
+298.12 What are you drinking at the CIP?
+299.32 And dip?
+300.16 A you.
+301.28 What do you call a few?
+303.04 It's three.
+304.56 Four.
+306.12 Nothing.
+306.80 I'm sure it was three.
+308.48 And what were you drinking?
+310.72 Tap beer pitchers.
+313.76 I mean, glasses of beer.
+316.08 What time did you leave this at the dip?
+318.36 It was close time.
+319.92 It was once 30 a m.
+323.24 Did you immediately drive away when you left the bar?
+325.76 Well, we tried.
+327.20 Well, why couldn't you leave?
+330.40 Well, what?
+330.80 To get in the car.
+332.20 We noticed the liquid on the ground.
+334.20 It turns out that John's cars front end was smashed.
+338.04 What happened next?
+340.08 This guy comes towards us with a gun in his hand.
+343.16 Do you know what kind of gun it was?
+345.08 It was a 45 caliber gun.
+346.64 No doubt about it.
+348.52 Do you know the mate of the gun?
+350.28 No.
+352.36 Well, what did you do?
+354.20 You just asked him to put the gun away.
+355.64 And he did.
+357.08 It appears that he wasn't sure where he was to get back to the car.
+361.92 What do you mean when you say the car was smashed?
+365.40 Well, smashed almost to the windshield and begun to smoke and leak.
+370.76 Could you explain?
+371.52 Smashed?
+372.76 Objection.
+373.40 Asked and answered.
+375.04 I think he just wants him to describe what he means.
+377.96 Perhaps he can rephrase it.
+380.36 Ever mind?
+380.88 You can answer.
+382.68 I don't remember the question.
+385.36 Reporter.
+386.12 Could you read back the last question?
+393.04 Could you explain smashed.
+396.68 It was a three foot dent in the front of the car.
+400.68 Please mark this as exhibit number five.
+405.28 That's exhibit five.
+406.32 Oh, yeah.
+410.36 What did you do when you noticed John's car was damaged?
+414.40 We called the police.
+416.48 What happened while you were waiting for the police to arrive?
+419.72 At that came speeding past our car.
+423.28 It must have been going 50mph.
+426.72 I think it was only a 25 mile per hour zone.
+430.44 And did the guy stop?
+432.72 No.
+433.96 It came around the block.
+434.92 Couple of times.
+436.08 We never saw him again.
+438.28 Was there any witness that came forward about the damage to John's car?
+441.92 Not that we found.
+443.52 Did you get an estimate on John's car?
+445.80 Yes.
+447.04 And how much was the estimate?
+449.80 It was about $7,500.
+453.36 Is that the exact price of the estimate?
+455.80 No.
+456.96 It was about $7,530.
+461.48 So the exact price of the estimate was $7,530.
+467.40 No, let me look.
+471.08 The exact price of the estimate was $7,529.
+476.92 And $0.21.
+480.24 Please mark this as exhibit three.
+485.00 I have no more questions.
+486.24 Do you?
+488.04 I have none.
+489.32 I have nothing.
+491.60 Thank you for your time.
