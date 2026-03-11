@@ -1,5 +1,8 @@
 import json
-import re
+import nltk
+from nltk.tokenize import sent_tokenize
+
+nltk.download("punkt")
 
 input_file = "output.txt"
 output_file = "combined_transcript.txt"
@@ -8,7 +11,14 @@ current_sentence = ""
 current_start_time = None
 sentences = []
 
-sentence_end = {".", "?"}
+def append_text(current, new_text, attaches_to):
+    """Append text depending on attaches_to"""
+    if attaches_to == "previous":
+        # No space if attaching to previous
+        return current.rstrip() + new_text
+    else:
+        # Add space if not attaching
+        return (current + " " + new_text).strip() if current else new_text
 
 with open(input_file, "r", encoding="utf-8") as f:
     for line in f:
@@ -20,35 +30,36 @@ with open(input_file, "r", encoding="utf-8") as f:
         metadata = data.get("metadata", {})
         text = metadata.get("transcript", "").strip()
         start_time = metadata.get("start_time", 0)
-        attaches_to = metadata.get("attaches_to")
+
+        # Check if attaches_to exists in any of the results
+        attaches_to = None
+        if "results" in data and data["results"]:
+            attaches_to = data["results"][-1].get("attaches_to")
 
         if not text:
             continue
 
-        # start new sentence timing
         if current_start_time is None:
             current_start_time = start_time
 
-        # apply attaches_to rule
-        if attaches_to == "previous":
-            current_sentence += text
-        else:
-            if current_sentence:
-                current_sentence += " " + text
-            else:
-                current_sentence = text
+        # Append text properly based on attaches_to
+        current_sentence = append_text(current_sentence, text, attaches_to)
 
-        # remove accidental spaces before punctuation
-        current_sentence = re.sub(r"\s+([.,?])", r"\1", current_sentence)
+        # Split sentences only if needed (optional, can remove if you want raw concatenation)
+        split_sentences = sent_tokenize(current_sentence)
+        if len(split_sentences) > 1:
+            for s in split_sentences[:-1]:
+                sentences.append(f"{current_start_time:.2f}  {s.strip()}")
+            current_sentence = split_sentences[-1]
+            current_start_time = start_time
 
-        # break sentence
-        if text in sentence_end:
-            sentences.append(f"{current_start_time:.2f}  {current_sentence.strip()}")
-            current_sentence = ""
-            current_start_time = None
+# Add last sentence
+if current_sentence:
+    sentences.append(f"{current_start_time:.2f}  {current_sentence.strip()}")
 
+# Write to output
 with open(output_file, "w", encoding="utf-8") as f:
     for s in sentences:
         f.write(s + "\n")
 
-print("Transcript formatted successfully")
+print("Transcript updated in text file.")
