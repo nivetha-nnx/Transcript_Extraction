@@ -1,65 +1,85 @@
 import json
-import nltk
-from nltk.tokenize import sent_tokenize
+ 
+def parse_transcript(input_file, output_file):
+    tokens = []  # List of dicts: {content, start_time, attaches_to, is_eos, type}
+ 
+    with open(input_file, "r") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                data = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+ 
+            if data.get("message") != "AddTranscript":
+                continue
+ 
+            results = data.get("results", [])
+            if not results:
+                continue
+ 
+            for result in results:
+                alt = result.get("alternatives", [{}])[0]
+                content = alt.get("content", "")
+                if not content:
+                    continue
+ 
+                token = {
+                    "content": content,
+                    "start_time": result.get("start_time", 0.0),
+                    "end_time": result.get("end_time", 0.0),
+                    "attaches_to": result.get("attaches_to", None),
+                    "is_eos": result.get("is_eos", False),
+                    "type": result.get("type", "word"),
+                    "speaker": alt.get("speaker", ""),
+                }
+                tokens.append(token)
+ 
+    # Build sentences
+    sentences = []       
+    current_sentence = None
+ 
+    for token in tokens:
+        content = token["content"]
+        attaches = token["attaches_to"] == "previous"
+        is_eos = token["is_eos"]
+        start_time = token["start_time"]
+ 
+        # Start a new sentence if there's none yet
+        if current_sentence is None:
+            current_sentence = {"start_time": start_time, "parts": []}
+ 
+        if attaches:
+            # No space before this token — attach directly to previous
+            current_sentence["parts"].append(content)
+        else:
+            if current_sentence["parts"]:
+                current_sentence["parts"].append(" " + content)
+            else:
+                current_sentence["parts"].append(content)
+ 
+        # If end-of-sentence punctuation, close and save the sentence
+        if is_eos:
+            sentences.append(current_sentence)
+            current_sentence = None
+ 
+    # Any remaining tokens not closed by EOS
+    if current_sentence and current_sentence["parts"]:
+        sentences.append(current_sentence)
+ 
+    # Write output
+    with open(output_file, "w") as out:
+        for sentence in sentences:
+            start = sentence["start_time"]
+            text = "".join(sentence["parts"])
+            out.write(f"{start:.2f} {text}\n")
+ 
+    print(f"Done! {len(sentences)} sentences written to '{output_file}'")
+ 
+if __name__ == "__main__":
+    input_file = "output.txt"
+    output_file = "combined_transcript.txt"
 
-nltk.download("punkt")
-
-input_file = "output.txt"
-output_file = "combined_transcript.txt"
-
-current_sentence = ""
-current_start_time = None
-sentences = []
-
-def append_text(current, new_text, attaches_to):
-    """Append text depending on attaches_to"""
-    if attaches_to == "previous":
-        # No space if attaching to previous
-        return current.rstrip() + new_text
-    else:
-        # Add space if not attaching
-        return (current + " " + new_text).strip() if current else new_text
-
-with open(input_file, "r", encoding="utf-8") as f:
-    for line in f:
-        data = json.loads(line)
-
-        if data.get("message") != "AddTranscript":
-            continue
-
-        metadata = data.get("metadata", {})
-        text = metadata.get("transcript", "").strip()
-        start_time = metadata.get("start_time", 0)
-
-        # Check if attaches_to exists in any of the results
-        attaches_to = None
-        if "results" in data and data["results"]:
-            attaches_to = data["results"][-1].get("attaches_to")
-
-        if not text:
-            continue
-
-        if current_start_time is None:
-            current_start_time = start_time
-
-        # Append text properly based on attaches_to
-        current_sentence = append_text(current_sentence, text, attaches_to)
-
-        # Split sentences only if needed (optional, can remove if you want raw concatenation)
-        split_sentences = sent_tokenize(current_sentence)
-        if len(split_sentences) > 1:
-            for s in split_sentences[:-1]:
-                sentences.append(f"{current_start_time:.2f}  {s.strip()}")
-            current_sentence = split_sentences[-1]
-            current_start_time = start_time
-
-# Add last sentence
-if current_sentence:
-    sentences.append(f"{current_start_time:.2f}  {current_sentence.strip()}")
-
-# Write to output
-with open(output_file, "w", encoding="utf-8") as f:
-    for s in sentences:
-        f.write(s + "\n")
-
-print("Transcript updated in text file.")
+    parse_transcript(input_file, output_file)
